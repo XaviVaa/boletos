@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @boleto.nombre %>
+</p>
+
+<p>
+  <b>Numero de asiento:</b>
+  <%= @boleto.asiento_id_seq %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%= @boleto.direccion %>
+</p>
+
+<p>
+  <b>Precio pagar:</b>
+  <%= @boleto.precio_pagar %>
+</p>
+
+<p>
+  <b>Email direccion:</b>
+  <%= @boleto.email_direccion %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @boleto.telefono %>
+</p>
+
+<%= link_to 'Edit', edit_boleto_path(@boleto) %> |
+<%= link_to 'Back', boletos_path %>

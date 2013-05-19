@@ -1,0 +1,41 @@
+<%= form_for(@boleto) do |f| %>
+  <% if @boleto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boleto.errors.count, "error") %> prohibited this boleto from being saved:</h2>
+
+      <ul>
+      <% @boleto.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label "Asiento #"%><br />
+    <%= f.text_field :asiento_id_seq %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br />
+    <%= f.text_area :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :precio_pagar %><br />
+    <%= f.text_field :precio_pagar %>
+  </div>
+  <div class="field">
+    <%= f.label :email_direccion %><br />
+    <%= f.text_field :email_direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
